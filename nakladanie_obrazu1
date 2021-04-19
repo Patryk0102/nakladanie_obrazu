@@ -1,0 +1,69 @@
+package nakladanie_obrazu;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class nakladanie_obrazu1  extends JFrame implements ActionListener {
+
+    JFrame frame = new JFrame("nakladanie obrazow");
+    JButton button1  = new JButton("Utworz");
+    JTextField a1234 = new JTextField();
+    JTextField rekin1 = new JTextField();
+    JTextField alfa = new JTextField();
+    JLabel  label1 = new JLabel("Nazwa_obrazka.jpg");
+    JLabel  label2 = new JLabel("Nazwa_obrazka.jpg");
+    JLabel  label3 = new JLabel("Podaj alfe");
+    String[] tryb = {"przezroczystosc"};
+    JComboBox combobox = new JComboBox(tryb);
+
+    nakladanie_obrazu1(){
+
+        label1.setBounds(50,100,120,25);
+        label2.setBounds(50,150,120,25);
+        label3.setBounds(50,200,120,15);
+        a1234.setBounds(115,100,200,15);
+        rekin1.setBounds(115,150,200,15);
+        alfa.setBounds(115,200,200,15);
+        button1.setBounds(102,250,100,25);
+        button1.setFocusable(false);
+        button1.addActionListener(this);
+        combobox.setBounds(200,250,150,25);
+
+
+        frame.add(combobox);
+        frame.add(button1);
+        frame.add(a1234);
+        frame.add(rekin1);
+        frame.add(label1);
+        frame.add(label2);
+        frame.add(label3);
+        frame.add(alfa);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(420,420);
+        frame.setLayout(null);
+        frame.setVisible(true);
+
+    }
+
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if(e.getSource()==button1){
+            String 1234_1 = 1234.getText();
+            String rekin1 = rekin.getText();
+
+           
+            if(combobox.getSelectedItem()=="przezroczystosc"){
+
+                ustawienia ustawienia = new ustawienia(1, 1234_1, rekin1,Double.parseDouble(alfa.getText()));
+                alfa.setText("");
+            }
+
+        }
+    }
+}
+
+
