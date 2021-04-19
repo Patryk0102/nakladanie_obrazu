@@ -7,3 +7,4 @@ public class n_o {
     public static void main(String[] args) throws Exception{
 
         new nakladanie_obrazu1();
+// niestety nie udalo mi sie skompilowac 
